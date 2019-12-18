@@ -1,3 +1,4 @@
 *.sw*
 tags
 dependencies/
+node_modules/
