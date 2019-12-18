@@ -19,7 +19,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | b
 nvm install 12.14.0
 nvm use default
 ```
-#### Install YARN
+Install and use YARN instead of NPM
 ```
 npm install -g yarn
 ```
