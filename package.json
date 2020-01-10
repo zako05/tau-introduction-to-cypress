@@ -4,7 +4,8 @@
   "description": "Test Automation University - Introduction to Cypress by Gil Tayar # Install prerequisities ## Install NodeJS ### download NodeJS from official site [NodeJS 12.14.0 LTS for Linux](https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-x64.tar.xz)  or [other downloads](https://nodejs.org/en/download/) ``` tar -xvf node-v12.14.0-linux-x64.tar.xz ``` ###  or install NodeJS using of NVM & AVM Install NVM(Node version manager), NodeJS + NPM(Node package manager) & AVN (Automatic version switching for Node) #### Install NVM ``` curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash ``` #### Install NodeJS + NPM (it's a part of Node) ``` nvm install 12.14.0 nvm use default ``` #### Install AVM ``` npm install -g avn avn-nvm avn-n avn setup ``` ## Instlal Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress": "cypress open",
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",

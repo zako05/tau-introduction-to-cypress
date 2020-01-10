@@ -29,12 +29,13 @@ describe('todo actions', () => {
     cy.get('.toogle').should('not.be.checked')
   })
   
-  it.only('should mark a todo as completed', () =>  {
+  it('should mark a todo as completed', () =>  {
     cy.get('.toggle').click()
     cy.get('label').should('have.css', 'text-decoration-line', 'line-through')
   })
   
   it('shoudl clear completed todos', () =>  {
+    cy.get('.toggle').click()
     cy.contains('Clear completed').click()
     cy.get('.todo-list').should('not.have.descendants', 'li')
   })
