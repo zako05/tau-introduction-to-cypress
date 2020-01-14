@@ -9,8 +9,13 @@ export class TodoPage {
     cy.get('.new-todo').type(todoText + '{enter}')
   }
 
-  validateTodoTxt(todoIndex, expectedText) { 
+  validateTodoText(todoIndex, expectedText) { 
     // cy.get('label').should('have.text', 'Clean room')
     cy.get(`.todo-list li:nth-child(${todoIndex + 1}) label`).should('have.text', expectedText)
+  }
+
+  validateToggleState(todoIndex, shouldBeToggled) {
+    const label = cy.get(`.todo-list li:nth-child(${todoIndex + 1}) label`)
+    label.should(`${shouldBeToggled ? '' : 'not.'}be.checked`)
   }
 }

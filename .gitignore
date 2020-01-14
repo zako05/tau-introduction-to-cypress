@@ -1,4 +1,7 @@
 *.sw*
 tags
+yarn.lock
+package-lock.json
 dependencies/
 node_modules/
+cyperss/videos/
