@@ -44,9 +44,12 @@ describe('todo actions', () => {
     todoPage.validateTodoCompletedState(0, true)
   })
   
-  it('shoudl clear completed todos', () =>  {
-    cy.get('.toggle').click()
-    cy.contains('Clear completed').click()
-    cy.get('.todo-list').should('not.have.descendants', 'li')
+  it('should clear completed todos', () =>  {
+    // cy.get('.toggle').click()
+    todoPage.toggleTodo(0)
+    // cy.contains('Clear completed').click()
+    todoPage.clearCompleted()
+    // cy.get('.todo-list').should('not.have.descendants', 'li')
+    todoPage.validateNumberOfTodoShown(0)
   })
 })

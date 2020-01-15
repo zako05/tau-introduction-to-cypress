@@ -13,6 +13,10 @@ export class TodoPage {
     cy.get(`.todo-list li:nth-child(${todoIndex + 1}) .toggle`).click()
   }
 
+  clearCompleted() {
+    cy.contains('Clear completed').click()
+  }
+
   validateTodoText(todoIndex, expectedText) { 
     // cy.get('label').should('have.text', 'Clean room')
     cy.get(`.todo-list li:nth-child(${todoIndex + 1}) label`).should('have.text', expectedText)
@@ -25,5 +29,9 @@ export class TodoPage {
 
   validateTodoCompletedState(todoIndex, shouldBeCompleted) {
     cy.get(`.todo-list li:nth-child(${todoIndex + 1}) label`).should(`${shouldBeCompleted ? '' : 'not.'}have.css`, 'text-decoration-line', 'line-through')
+  }
+
+  validateNumberOfTodoShown(expectedNumberOfTodos) {
+    cy.get(`.todo-list li`).should('have.length', expectedNumberOfTodos)
   }
 }
