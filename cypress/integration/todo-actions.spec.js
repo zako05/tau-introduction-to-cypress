@@ -38,8 +38,10 @@ describe('todo actions', () => {
   })
   
   it('should mark a todo as completed', () =>  {
-    cy.get('.toggle').click()
-    cy.get('label').should('have.css', 'text-decoration-line', 'line-through')
+    // cy.get('.toggle').click()
+    todoPage.toggleTodo(0)
+    // cy.get('label').should('have.css', 'text-decoration-line', 'line-through')
+    todoPage.validateTodoCompletedState(0, true)
   })
   
   it('shoudl clear completed todos', () =>  {
