@@ -1,4 +1,4 @@
-*.sw*
+*.swp
 tags
 yarn.lock
 package-lock.json
