@@ -48,3 +48,12 @@ most common way is to use npx as following
 ```
 npx cypress open
 ```
+# Applitools
+## Install
+```
+npm install @applitools/eyes-cypress@3
+```
+## Setup
+```
+npx eyes-setup
+```

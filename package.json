@@ -20,5 +20,8 @@
   "homepage": "https://github.com/zako05/tau-introduction-to-cypress#readme",
   "devDependencies": {
     "cypress": "^3.8.2"
+  },
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.9.4"
   }
 }
