@@ -6,3 +6,5 @@ dependencies/
 node_modules/
 cyperss/videos/
 node_modules/
+cypress/support/*
+cypress/plugins/*
