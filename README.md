@@ -57,3 +57,7 @@ npm install @applitools/eyes-cypress@3
 ```
 npx eyes-setup
 ```
+```
+export APPLITOOLS_API_KEY= {yourAPIKey}
+set APPLITOOLS_API_KEY= {yourAPIKey}
+```
